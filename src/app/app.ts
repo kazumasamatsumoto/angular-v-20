@@ -4,9 +4,11 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  template: `Hello`,
+  styles: `
+    :host {
+      color: blue
+    }
+  `,
 })
-export class App {
-  protected title = 'v-20';
-}
+export class App {}
