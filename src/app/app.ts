@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `Hello`,
-  styles: `
-    :host {
-      color: blue
+  template: `
+    @if (isLoggedIn) {
+    <p>Welcome back, Friend!</p>
+    } @else {
+    <p>No, the server is not running</p>
     }
   `,
 })
-export class App {}
+export class App {
+  isLoggedIn = false;
+}
